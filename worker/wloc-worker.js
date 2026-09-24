@@ -178,7 +178,7 @@ let savedLon = null, savedLat = null, savedTimeStr = '';
 /* ---- i18n ---- */
 const I18N = {
   zh: {
-    title: 'WLOC 虚拟定位',
+    title: 'GPS',
     layer_satellite: '卫星', layer_amap: '高德', layer_color: '彩色', layer_standard: '标准', layer_dark: '暗色',
     err_html: '<b>模块未生效</b>请检查以下配置：<br>1. 已安装并启用 WLOC 定位模块<br>2. MITM 已开启且信任证书<br>3. MITM 主机名包含 gs-loc.apple.com<br>4. 当前网络已走代理',
     choose_title: '选择目标位置',
