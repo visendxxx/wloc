@@ -7,23 +7,23 @@ category: Tools
 
 http:
   mitm:
-    - "gs-loc.apple.com"
-    - "gs-loc-cn.apple.com"
-    - "gsp-ssl.ls.apple.com"
-    - "bluedot.is.autonavi.com"
-    - "bluedot.is.autonavi.com.gds.alibabadns"
+    - gs-loc.apple.com
+    - gs-loc-cn.apple.com
+    - gsp-ssl.ls.apple.com
+    - bluedot.is.autonavi.com
+    - bluedot.is.autonavi.com.gds.alibabadns
 
   script:
-    - match: ^https?:\/\/(?:gs-loc(?:-cn)?\.apple\.com|gsp-ssl\.ls\.apple\.com|bluedot\.is\.autonavi\.com(?:\.gds\.alibabadns\.com)?)\/clls\/wloc
+    - match: "^https?:\\/\\/(?:gs-loc(?:-cn)?\\.apple\\.com|gsp-ssl\\.ls\\.apple\\.com|bluedot\\.is\\.autonavi\\.com(?:\\.gds\\.alibabadns\\.com)?)\\/clls\\/wloc"
       name: WLOC.Location
       type: response
       require-body: true
       binary-mode: true
       max-size: 0
       timeout: 30
-      argument: longitude=113.94114&latitude=22.544577&accuracy=25&logLevel=info
+      argument: "longitude=113.94114&latitude=22.544577&accuracy=25&logLevel=info"
 
-    - match: ^https?:\/\/gs-loc(-cn)?\.apple\.com\/wloc-settings\/save
+    - match: "^https?:\\/\\/gs-loc(-cn)?\\.apple\\.com\\/wloc-settings\\/save"
       name: WLOC.Settings
       type: request
       require-body: false
